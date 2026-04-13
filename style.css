@@ -18,19 +18,29 @@ body {
   max-width: 900px;
 }
 
-/* header */
+/* —— header —— */
 .site-header {
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #FF003B;
+}
+
+.site-logo {
+  width: 120px;
+  margin-bottom: 12px;
 }
 
 .site-title {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
 }
 
-/* chat window */
+/* —— chat window —— */
 .chatbox {
   margin: 40px 0;
 }
@@ -46,21 +56,22 @@ body {
   white-space: pre-line;
 }
 
-/* messages */
+/* —— messages —— */
 .msg {
   margin-bottom: 14px;
   line-height: 1.5;
 }
 
 .msg.user {
-  color: #000;
+  color: #000000;
+  font-weight: 500;
 }
 
 .msg.ai {
-  color: #666666;
+  color: #555555;
 }
 
-/* input row */
+/* —— input row —— */
 .chat-form {
   display: flex;
   gap: 12px;
@@ -72,16 +83,17 @@ body {
   padding: 12px;
   border: 1px solid #ccc;
   font-size: 18px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .chat-form input:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #E3A635;
   outline-offset: 2px;
 }
 
 .chat-form button {
   font-size: 18px;
-  background: #000;
+  background: #FF003B;
   color: #fff;
   border: none;
   padding: 12px;
@@ -99,15 +111,15 @@ body {
 }
 
 .chat-form button:hover {
-  background: #666666;
+  background: #cc002f;
 }
 
 .chat-form button:focus {
-  outline: 2px solid #000;
+  outline: 2px solid #E3A635;
   outline-offset: 2px;
 }
 
-/* visually hidden */
+/* —— visually hidden —— */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -120,12 +132,14 @@ body {
   border: 0;
 }
 
-/* footer */
+/* —— footer —— */
 .site-footer {
   margin: 60px 0 40px;
   text-align: center;
   font-size: 14px;
   color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 24px;
 }
 
 .site-footer nav {
@@ -134,10 +148,10 @@ body {
 
 .site-footer a {
   margin: 0 8px;
-  color: #000;
+  color: #E3A635;
   text-decoration: none;
 }
 
 .site-footer a:hover {
-  color: #666666;
+  color: #c4891f;
 }
