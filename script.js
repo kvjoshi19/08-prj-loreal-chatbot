@@ -39,18 +39,16 @@ chatForm.addEventListener("submit", async (e) => {
   appendMessage("ai", "Thinking...");
 
   try {
-    const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${OPENAI_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: "gpt-4o",
-        messages: messages,
-        max_tokens: 300
-      })
-    });
+    const response = await fetch("https://loreal-chatbot.kvjoshi.workers.dev/ttps://your-worker-name.your-account.workers.dev", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+    // No API key here — Cloudflare holds it securely
+  },
+  body: JSON.stringify({
+    messages: messages   // Cloudflare worker expects { messages: [...] }
+  })
+});
 
     const data = await response.json();
     const reply = data.choices[0].message.content;
